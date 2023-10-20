@@ -1,5 +1,5 @@
 function genBtn() {
-    const tests = document.getElementById("out");
+    const tests = document.getElementById("output");
     var valueInVar = '';
 valueInVar = document.getElementById("name").value;
 
