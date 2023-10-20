@@ -1,11 +1,4 @@
-let generateBtn = document.getElementById("generatebtn");
-let groupNames = document.getElementById("groupnames").innerText=("Andreass,Gaute");
-let groupOutput = document.getElementById("groupoutput");
+var tests = document.getElementById("test").innerHTML = ("hello");
 
-let groupNamesContent = groupoutput.textContent;
-
-print(groupoutput.textContent);
-console.log(groupoutput.textContent);
-
-print(groupNamesContent)
-console.log(groupNamesContent)
+console.log(tests);
+print(tests);
