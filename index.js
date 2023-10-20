@@ -1,7 +1,10 @@
-let generateBtn = document.getElementById(generateBtn);
-let groupNames = document.getElementById(groupNames);
-let groupOutput = document.getElementById(groupOutput);
+let generateBtn = document.getElementById(generatebtn);
+let groupNames = document.getElementById(groupnames);
+let groupOutput = document.getElementById(groupoutput);
 
-if () {
-    
+let groupNamesCont = groupoutput.textContent;
+
+function genGroup() {
+    print(groupNamesCont)
+    console.log(groupNamesCont)
 }
