@@ -1,2 +1,4 @@
-const tests = document.getElementById("test");
-tests.innerHTML = ("hello")
+function genBtn() {
+    const tests = document.getElementById("test");
+    tests.innerHTML = ("hello")
+}
