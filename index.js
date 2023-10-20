@@ -32,7 +32,7 @@ function Slid() {
         document.body.appendChild(x);
 
     }
-    while( SliderTall  <=  SliderTracfix)
+    while( SliderTall  <=  SliderTrac)
     {
         var elem = document.getElementById("testid");
         elem.parentNode.removeChild(elem);
