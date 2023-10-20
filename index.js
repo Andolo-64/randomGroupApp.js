@@ -5,10 +5,10 @@ function genBtn() {
     tests.innerHTML = (valueInVar);
     let valueInVarArray = valueInVar.split("\n");
     console.log(valueInVarArray);
-    console.log(valueInVarArray.length);
+    console.log("array lengde" + valueInVarArray.length);
     let valueInVarArrayLength = valueInVar.length;
     let personPerGroup = valueInVarArrayLength / SliderTall;
-    console.log(sliderTall)
+    console.log("person per group" + personPerGroup)
 }
 
 function Slid() {
