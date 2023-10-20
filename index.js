@@ -12,9 +12,9 @@ function genBtn() {
 }
 
 function Slid() {
+    var SliderTall = '';
     const sliderTall = document.getElementById("sliderTall");
     SliderTall = document.getElementById("GrupeSlider").value;
-    var SliderTall = '';
     sliderTall.innerHTML = (SliderTall)
 
 }

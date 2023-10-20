@@ -17,8 +17,8 @@
         </div>
         <button id="generateBtn" onclick="genBtn()">Generate Groups </button>
         <div>
-            <input type="range"slider="Slid()" min="1" max="10" value="5" class="slider" id="GrupeSlider">
-            <p id="sliderTall">3</p>
+            <input type="range" min="1" max="10" value="5" class="slider" id="GrupeSlider"onchange="Slid(this.value)">
+            <p id="sliderTall">5</p>
         </div>
         <div id="groupOutput">
             <textarea id="output" inputname="output" placeholder="randomGroup" size="20" spellcheck="false"
