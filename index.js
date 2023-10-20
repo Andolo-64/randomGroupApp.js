@@ -1,4 +1,7 @@
 function genBtn() {
     const tests = document.getElementById("test");
-    tests.innerHTML = ("hello")
+    var valueInVar = '';
+valueInVar = document.getElementById("name").value;
+
+tests.innerHTML = (valueInVar)
 }
