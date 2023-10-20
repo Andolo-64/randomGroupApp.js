@@ -11,11 +11,11 @@ function genBtn() {
     console.log("array lengde" + valueInVarArray.length);
     let valueInVarArrayLength = valueInVar.length;
     let personPerGroup = valueInVarArrayLength / SliderTall;
-    console.log("person per group" + personPerGroup)
+    console.log("person per group" + personPerGroup);
+    let roundedPpg = Math.round(personPerGroup);
 }
 
 function Slid() {
-
     const sliderTall = document.getElementById("sliderTall");
     SliderTall = document.getElementById("GrupeSlider").value;
     sliderTall.innerHTML = (SliderTall);
