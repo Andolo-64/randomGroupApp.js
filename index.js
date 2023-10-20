@@ -3,5 +3,8 @@ function genBtn() {
     var valueInVar = '';
     valueInVar = document.getElementById("name").value;
 
-    tests.innerHTML = (valueInVar)
+    tests.innerHTML = (valueInVar);
+    let valueInVarArray = valueInVar.split("\n");
+    console.log(valueInVarArray);
+    console.log(valueInVarArray[2]);
 }
