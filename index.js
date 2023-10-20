@@ -14,7 +14,6 @@ function genBtn() {
 }
 
 function Slid() {
-
     const sliderTall = document.getElementById("sliderTall");
     SliderTall = document.getElementById("GrupeSlider").value;
     sliderTall.innerHTML = (SliderTall);
