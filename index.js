@@ -2,7 +2,7 @@ var SliderTall = '';
 
 function genBtn() {
     const tests = document.getElementById("output");
-    var valueInVar = ''; 
+    var valueInVar = '';
     valueInVar = document.getElementById("name").value;
     tests.innerHTML = (valueInVar);
     let valueInVarArray = valueInVar.split("\n");
@@ -14,9 +14,9 @@ function genBtn() {
 }
 
 function Slid() {
-    
+
     const sliderTall = document.getElementById("sliderTall");
     SliderTall = document.getElementById("GrupeSlider").value;
     sliderTall.innerHTML = (SliderTall);
-   
+    return SliderTall
 }
