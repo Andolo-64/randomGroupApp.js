@@ -1,1 +1,1 @@
-document.getElementById().innerHTML = "";
+document.getElementById(generateBtn).innerHTML = "";
