@@ -8,7 +8,11 @@ body {
 .container {
     text-align: center;
     margin: 50px;
-    line-height: 2em; 
+    
+}
+#groupNames {
+    line-height: 200px;
+   
 }
 
 h1 {
@@ -32,5 +36,6 @@ button:hover {
     margin: 20px 0;
     text-align: left;
 }
+
 
 /* You can add more styles as needed */
