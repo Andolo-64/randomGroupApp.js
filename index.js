@@ -1,3 +1,5 @@
+var SliderTall = '';
+
 function genBtn() {
     const tests = document.getElementById("output");
     var valueInVar = ''; 
@@ -12,9 +14,9 @@ function genBtn() {
 }
 
 function Slid() {
-    var SliderTall = '';
+    
     const sliderTall = document.getElementById("sliderTall");
     SliderTall = document.getElementById("GrupeSlider").value;
     sliderTall.innerHTML = (SliderTall);
-    return SliderTall;
+   
 }
