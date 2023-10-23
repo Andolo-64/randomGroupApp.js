@@ -1,5 +1,5 @@
 var SliderTall = 5;
-var SliderTrac = 0;
+var SliderTrac = -1;
 
 function genBtn() {
     const tests = document.getElementById("output");
@@ -22,16 +22,18 @@ function Slid() {
     sliderTall.innerHTML = (SliderTall);
     //Group Textbox
 
-
     while(SliderTrac <= SliderTall )
     {
         SliderTrac++;
-        var x = document.createElement("INPUT");
-        x.setAttribute("type", "textarea");
-        x.setAttribute("value", SliderTall);
-        x.setAttribute("id", "testid");
-        document.body.appendChild(x);
-
+        var Scalebox = document.createElement("textarea");
+        Scalebox.setAttribute("type", "textarea");
+        Scalebox.setAttribute("value", SliderTall);
+        Scalebox.setAttribute("id", "testid");
+        Scalebox.setAttribute("readonly", "true")
+        Scalebox.setAttribute("placeholder","randomGroup")
+        Scalebox.setAttribute("size","20")
+        Scalebox.setAttribute( "rows","6")
+        document.body.appendChild(Scalebox);
     }
     while( SliderTall  <=  SliderTrac)
     {
@@ -39,11 +41,6 @@ function Slid() {
         elem.parentNode.removeChild(elem);
         SliderTrac--;
     }
- 
- 
-
-
-    return SliderTall
-
+    return SliderTall;
 
 }
