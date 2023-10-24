@@ -20,7 +20,6 @@ function Slid() {
     const sliderTall = document.getElementById("sliderTall");
     SliderTall = document.getElementById("GrupeSlider").value;
     sliderTall.innerHTML = (SliderTall);
-    //Group Textbox
 
     while(SliderTrac <= SliderTall )
     {
@@ -42,11 +41,9 @@ function Slid() {
     
     while( SliderTall  <=  SliderTrac)
     {
-        var elem = document.getElementsByName("Scaletext");
-        if (elem) {
-            elem.parentNode.removeChild(elem); // Remove the element from its parent
-        }
-       // elem.parentNode.removeChild(elem);
+        var elem = document.getElementById("BoxId" + SliderTrac);
+      
+       elem.parentNode.removeChild(elem);
         SliderTrac--;
     }
     return SliderTall;
