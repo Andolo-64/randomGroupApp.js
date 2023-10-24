@@ -29,7 +29,6 @@ function Slid() {
 
         Scalebox.setAttribute("type", "textarea");
         Scalebox.setAttribute("value", SliderTall);
-        Scalebox.setAttribute("name", "Scaletext");
         Scalebox.setAttribute("id", uniqueId);
         Scalebox.setAttribute("readonly", "true")
         Scalebox.setAttribute("placeholder","randomGroup")
