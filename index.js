@@ -26,21 +26,28 @@ function Slid() {
     {
         SliderTrac++;
         var Scalebox = document.createElement("textarea");
+        var uniqueId = "BoxId" + SliderTrac;
+
         Scalebox.setAttribute("type", "textarea");
         Scalebox.setAttribute("value", SliderTall);
-        Scalebox.setAttribute("id", "testid");
+        Scalebox.setAttribute("name", "Scaletext");
+        Scalebox.setAttribute("id", uniqueId);
         Scalebox.setAttribute("readonly", "true")
         Scalebox.setAttribute("placeholder","randomGroup")
         Scalebox.setAttribute("size","20")
         Scalebox.setAttribute( "rows","6")
+
         document.body.appendChild(Scalebox);
     }
+    
     while( SliderTall  <=  SliderTrac)
     {
-        var elem = document.getElementById("testid");
-        elem.parentNode.removeChild(elem);
+        var elem = document.getElementsByName("Scaletext");
+        if (elem) {
+            elem.parentNode.removeChild(elem); // Remove the element from its parent
+        }
+       // elem.parentNode.removeChild(elem);
         SliderTrac--;
     }
     return SliderTall;
-
 }
