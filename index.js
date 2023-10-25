@@ -2,6 +2,11 @@ var SliderTall = 5;
 var SliderTrac = -1;
 
 function genBtn() {
+
+    LagBox();
+
+    SletBox();
+
     const tests = document.getElementById("output");
     var valueInVar = '';
     valueInVar = document.getElementById("name").value;
@@ -15,7 +20,7 @@ function genBtn() {
     let roundedPpg = Math.round(personPerGroup);
     console.log(roundedPpg);
 
-
+    
 
 }
 
@@ -24,10 +29,8 @@ function Slid() {
     SliderTall = document.getElementById("GrupeSlider").value;
     sliderTall.innerHTML = (SliderTall);
 
-
-    LagBox();
-
-    SletBox();
+   
+   
 
 }
 
