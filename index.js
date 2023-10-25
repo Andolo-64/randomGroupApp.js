@@ -2,24 +2,16 @@ var SliderTall = 5;
 var SliderTrac = -1;
 
 function genBtn() {
-
     LagBox();
-
     SletBox();
 
-    const tests = document.getElementById("output");
-    var valueInVar = '';
-    valueInVar = document.getElementById("name").value;
-    tests.innerHTML = (valueInVar);
+    var valueInVar = document.getElementById("name").value;
     let valueInVarArray = valueInVar.split("\n");
     console.log(valueInVarArray);
-    let valueInVarArrayLength = valueInVar.filter(item => typeof item === 'object').length;
-    console.log("array lengde" + valueInVarArrayLength);
-    let personPerGroup = valueInVarArrayLength / SliderTall;
-    console.log("person per group" + personPerGroup);
-    let roundedPpg = Math.round(personPerGroup);
-    console.log(roundedPpg);
-
+    // Move the object at index 1 (Object 2) to index 3
+    //valueInVarArray.splice(1, 1)[0]; // Remove it from the array
+    //valueInVarArray.splice(3, 0, objectToMove); // Insert it at the new position
+    console.log(valueInVarArray)
 }
 
 function Slid() {
@@ -33,7 +25,6 @@ function LagBox() {
         SliderTrac++;
         var Scalebox = document.createElement("textarea");
         var uniqueId = "BoxId" + SliderTrac;
-
         Scalebox.setAttribute("type", "textarea");
         Scalebox.setAttribute("value", SliderTall);
         Scalebox.setAttribute("id", uniqueId);
@@ -42,7 +33,6 @@ function LagBox() {
         Scalebox.setAttribute("size", "20");
         Scalebox.setAttribute("rows", "6");
         Scalebox.classList.add("Boxclass");
-
         document.body.appendChild(Scalebox);
     }
 }
@@ -56,6 +46,3 @@ function SletBox() {
     }
 
 }
-
-
-
