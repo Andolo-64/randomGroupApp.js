@@ -14,6 +14,9 @@ function genBtn() {
     console.log("person per group" + personPerGroup);
     let roundedPpg = Math.round(personPerGroup);
     console.log(roundedPpg);
+
+
+
 }
 
 function Slid() {
@@ -21,8 +24,15 @@ function Slid() {
     SliderTall = document.getElementById("GrupeSlider").value;
     sliderTall.innerHTML = (SliderTall);
 
-    while(SliderTrac <= SliderTall )
-    {
+
+    LagBox();
+
+    SletBox();
+
+}
+
+function LagBox() {
+    while (SliderTrac <= SliderTall) {
         SliderTrac++;
         var Scalebox = document.createElement("textarea");
         var uniqueId = "BoxId" + SliderTrac;
@@ -32,19 +42,22 @@ function Slid() {
         Scalebox.setAttribute("id", uniqueId);
         Scalebox.setAttribute("readonly", "true");
         Scalebox.setAttribute("placeholder", SliderTrac);
-        Scalebox.setAttribute("size","20");
-        Scalebox.setAttribute( "rows","6");
+        Scalebox.setAttribute("size", "20");
+        Scalebox.setAttribute("rows", "6");
         Scalebox.classList.add("Boxclass");
 
         document.body.appendChild(Scalebox);
     }
-    
-    while( SliderTall  <=  SliderTrac)
-    {
+}
+
+function SletBox() {
+    while (SliderTall <= SliderTrac) {
         var elem = document.getElementById("BoxId" + SliderTrac);
-      
-       elem.parentNode.removeChild(elem);
+
+        elem.parentNode.removeChild(elem);
         SliderTrac--;
     }
-    return SliderTall;
+
 }
+
+
