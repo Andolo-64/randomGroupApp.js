@@ -4,15 +4,21 @@ var SliderTrac = -1;
 function genBtn() {
     LagBox();
     SletBox();
-
-    var valueInVar = document.getElementById("name").value;
-    let valueInVarArray = valueInVar.split("\n");
-    console.log(valueInVarArray);
-    // Move the object at index 1 (Object 2) to index 3
-    //valueInVarArray.splice(1, 1)[0]; // Remove it from the array
-    //valueInVarArray.splice(3, 0, objectToMove); // Insert it at the new position
-    console.log(valueInVarArray)
+    randGroup();
 }
+
+function randGroup() {
+    var valueInVar = document.getElementById("name").value;
+    let splitArray = valueInVar.split("\n");
+    var splitArrayLength = splitArray.length;
+    let randGroupbad = splitArrayLength / SliderTall;
+    let randGroup = Math.ceil(randGroupbad);
+    console.log("rounded up group " + randGroup);
+    console.log(splitArray)
+}
+
+//let splitArrayLength = splitArray.length;
+//randomize nummber out of array
 
 function Slid() {
     const sliderTall = document.getElementById("sliderTall");

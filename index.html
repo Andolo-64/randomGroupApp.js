@@ -12,21 +12,14 @@
         <h1>Random Group App Generator</h1>
         <p id="test">Click the button to generate random groups:</p>
         <div id="groupNames">
-            <textarea id="name" inputname="input" resize ="none" placeholder="Skriv navn" size="20" spellcheck="false"
+            <textarea id="name" inputname="input" resize="none" placeholder="Skriv navn" size="20" spellcheck="false"
                 rows="6"></textarea>
         </div>
         <button id="generateBtn" onclick="genBtn()">Generate Groups </button>
         <div>
-            <input type="range" min="1" max="10" value="5" class="slider" id="GrupeSlider"onchange="Slid(this.value)">
+            <input type="range" min="1" max="10" value="5" class="slider" id="GrupeSlider" onchange="Slid(this.value)">
             <p id="sliderTall">Velg Kor mange Gruper</p>
         </div>
-        <div id="groupOutput">
-            
-                <p id="demo"></p>
-
-            <!-- Generated groups will appear here -->
-        </div>
-
     </div>
 
     <script src="index.js"></script>
