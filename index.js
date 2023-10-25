@@ -2,35 +2,22 @@ var SliderTall = 5;
 var SliderTrac = -1;
 
 function genBtn() {
-
     LagBox();
-
     SletBox();
 
     var valueInVar = document.getElementById("name").value;
     let valueInVarArray = valueInVar.split("\n");
     console.log(valueInVarArray);
-    let valueInVarArrayLength = valueInVar.filter(item => typeof item === 'object').length;
-    console.log("array lengde" + valueInVarArrayLength);
-    let personPerGroup = valueInVarArrayLength / SliderTall;
-    console.log("person per group" + personPerGroup);
-    let roundedPpg = Math.round(personPerGroup);
-    console.log(roundedPpg);
-
-    
-
+    // Move the object at index 1 (Object 2) to index 3
+    //valueInVarArray.splice(1, 1)[0]; // Remove it from the array
+    //valueInVarArray.splice(3, 0, objectToMove); // Insert it at the new position
+    console.log(valueInVarArray)
 }
-
-
 
 function Slid() {
     const sliderTall = document.getElementById("sliderTall");
     SliderTall = document.getElementById("GrupeSlider").value;
     sliderTall.innerHTML = (SliderTall);
-
-   
-   
-
 }
 
 function LagBox() {
