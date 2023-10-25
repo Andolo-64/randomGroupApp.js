@@ -35,9 +35,13 @@ button:hover {
 }
 
 #name{
-    
+    min-height:100px;
+    min-width:200px;
 }
 
+.boxclass{
+    resize: none;
+}
 
 #testid{
 resize: none;

@@ -30,10 +30,11 @@ function Slid() {
         Scalebox.setAttribute("type", "textarea");
         Scalebox.setAttribute("value", SliderTall);
         Scalebox.setAttribute("id", uniqueId);
-        Scalebox.setAttribute("readonly", "true")
-        Scalebox.setAttribute("placeholder","randomGroup")
-        Scalebox.setAttribute("size","20")
-        Scalebox.setAttribute( "rows","6")
+        Scalebox.setAttribute("readonly", "true");
+        Scalebox.setAttribute("placeholder", SliderTrac);
+        Scalebox.setAttribute("size","20");
+        Scalebox.setAttribute( "rows","6");
+        Scalebox.classList.add("Boxclass");
 
         document.body.appendChild(Scalebox);
     }
