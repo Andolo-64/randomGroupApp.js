@@ -1,7 +1,7 @@
 # randomGroupApp.js
 
 ## andreass working on
-### duplicate boxes from slider
+### make boxes appear at button click
 
 ## gaute working on
-### runde opp person per gruppe og dele arayen
+### randomize array and split array
