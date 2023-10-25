@@ -39,6 +39,12 @@ button:hover {
     min-width:200px;
 }
 
+#GrupeSlider{
+    -webkit-appearance: none;
+    background: #4e576b60;
+    
+}
+
 .boxclass{
     resize: none;
 }

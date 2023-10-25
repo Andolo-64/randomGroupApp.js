@@ -20,18 +20,12 @@ function genBtn() {
     let roundedPpg = Math.round(personPerGroup);
     console.log(roundedPpg);
 
-    
-
 }
 
 function Slid() {
     const sliderTall = document.getElementById("sliderTall");
     SliderTall = document.getElementById("GrupeSlider").value;
     sliderTall.innerHTML = (SliderTall);
-
-   
-   
-
 }
 
 function LagBox() {
@@ -62,5 +56,6 @@ function SletBox() {
     }
 
 }
+
 
 
