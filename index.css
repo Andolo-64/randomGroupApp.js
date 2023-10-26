@@ -15,9 +15,9 @@ h1 {
 }
 
 button {
-    background-color: #007BFF;
+     background-image: linear-gradient( rgb(47, 0, 255) , rgb(0, 183, 255));
     color: white;
-    padding: 22px 20px;
+    padding: 10px 20px;
     border: none;
     cursor: pointer;
     font-size: 16px;
@@ -25,13 +25,13 @@ button {
     border-radius: 25px;
     background-position: left top;
     background-repeat: repeat;
-    padding: 20px; 
+    
     width: 200px;
-    height: 10px;  
+    height: 50px;  
 }
 
 button:hover {
-    background: linear-gradient(to bottom, #205337, #2a662e);
+    background: linear-gradient(to bottom, #205337, #000000);
     
 }
 
@@ -40,11 +40,17 @@ button:hover {
     text-align: center;
     margin: 50px;
 }
+#test{
+    color: #9ff39f; 
+}
 #Dbaner{
 
     margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+#sliderTall{
+    color: #9ff39f;
 }
 
 #name{
