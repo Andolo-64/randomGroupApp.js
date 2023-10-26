@@ -40,6 +40,12 @@ button:hover {
     text-align: center;
     margin: 50px;
 }
+#Dbaner{
+
+    margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 
 #name{
     min-height:100px;
