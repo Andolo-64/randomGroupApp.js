@@ -36,6 +36,10 @@ function shuffle(array) {
 };
   // slutt av fisher yates algoritmen
 
+  // random tall ta array med random tall put i box
+
+  
+
 function Slid() {
     const sliderTall = document.getElementById("sliderTall");
     SliderTall = document.getElementById("GrupeSlider").value;
