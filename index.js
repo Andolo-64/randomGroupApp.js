@@ -1,24 +1,40 @@
 var SliderTall = 5;
 var SliderTrac = -1;
 
+function makeArray() {
+    var valueInVar = document.getElementById("name").value;
+    let array = valueInVar.split("\n");
+    return array;
+}
+
 function genBtn() {
+    var array = makeArray(); // Store the array returned by makeArray in a variable.
     LagBox();
     SletBox();
-    randGroup();
+    shuffle(array); // Pass the array to the shuffle function.
 }
 
-function randGroup() {
-    var valueInVar = document.getElementById("name").value;
-    let splitArray = valueInVar.split("\n");
-    var splitArrayLength = splitArray.length;
-    let randGroupbad = splitArrayLength / SliderTall;
-    let randGroup = Math.ceil(randGroupbad);
-    console.log("rounded up group " + randGroup);
-    console.log(splitArray)
-}
-
-//let splitArrayLength = splitArray.length;
-//randomize nummber out of array
+//fisher yates shuffle algoritm så me fant på https://bost.ocks.org/mike/shuffle/ 3eie løsning
+function shuffle(array) {
+    console.log(array);
+    var m = array.length, t, i;
+  
+    // While there remain elements to shuffle…
+    while (m) {
+  
+      // Pick a remaining element…
+      i = Math.floor(Math.random() * m--);
+  
+      // And swap it with the current element.
+      t = array[m];
+      array[m] = array[i];
+      array[i] = t;
+    }
+    console.log(array);
+  
+    return array;
+};
+  // slutt av fisher yates algoritmen
 
 function Slid() {
     const sliderTall = document.getElementById("sliderTall");
