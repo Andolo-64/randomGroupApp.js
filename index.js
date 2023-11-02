@@ -47,7 +47,8 @@ function Slid() {
 }
 
 function LagBox() {
-    while (SliderTrac <= SliderTall) {
+    for (SliderTrac ;SliderTrac <= SliderTall;){
+   // while (SliderTrac <= SliderTall) {
         SliderTrac++;
         var Scalebox = document.createElement("textarea");
         var uniqueId = "BoxId" + SliderTrac;
@@ -64,7 +65,7 @@ function LagBox() {
 }
 
 function SletBox() {
-    while (SliderTall <= SliderTrac) {
+    for (SliderTall;SliderTall <= SliderTrac;) {
         var elem = document.getElementById("BoxId" + SliderTrac);
 
         elem.parentNode.removeChild(elem);
