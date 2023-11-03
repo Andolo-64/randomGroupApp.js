@@ -1,6 +1,7 @@
 var SliderTall = 5;
 var SliderTrac = -1;
 
+
 function makeArray() {
     var valueInVar = document.getElementById("name").value;
     let array = valueInVar.split("\n");
@@ -31,14 +32,40 @@ function shuffle(array) {
       array[i] = t;
     }
     console.log(array);
-  
+  if(!m)
+  {
+    arrayIbox(array);
+  }
+
     return array;
 };
   // slutt av fisher yates algoritmen
 
   // random tall ta array med random tall put i box
+function arrayIbox(array)
+{
+var BoxtoarrayL = array.length / SliderTall ;
+console.log(BoxtoarrayL + "BoxtoarrayL")
 
-  
+if(BoxtoarrayL < 1 )
+{
+    window.alert("Du Har For liten personer til og lage grupene leg til flere eler lag mindre gruper ☺");
+    return 0;
+}
+var Id = -1;
+
+
+array.forEach(function(element) 
+{  
+   
+    if(Id > element) {Id = -1}
+    Id++;
+       var  uniqueId = "BoxId" + Id;
+    document.getElementById(uniqueId).value += element;
+    console.log(element + "iBox");
+    console.log(Id + "iBox"); 
+} );
+}
 
 function Slid() {
     const sliderTall = document.getElementById("sliderTall");
@@ -48,7 +75,6 @@ function Slid() {
 
 function LagBox() {
     for (SliderTrac ;SliderTrac <= SliderTall;){
-   // while (SliderTrac <= SliderTall) {
         SliderTrac++;
         var Scalebox = document.createElement("textarea");
         var uniqueId = "BoxId" + SliderTrac;
@@ -56,7 +82,7 @@ function LagBox() {
         Scalebox.setAttribute("value", SliderTall);
         Scalebox.setAttribute("id", uniqueId);
         Scalebox.setAttribute("readonly", "true");
-        Scalebox.setAttribute("placeholder", SliderTrac);
+        Scalebox.setAttribute("placeholder", "not valid");
         Scalebox.setAttribute("size", "20");
         Scalebox.setAttribute("rows", "6");
         Scalebox.classList.add("Boxclass");
@@ -67,9 +93,8 @@ function LagBox() {
 function SletBox() {
     for (SliderTall;SliderTall <= SliderTrac;) {
         var elem = document.getElementById("BoxId" + SliderTrac);
-
-        elem.parentNode.removeChild(elem);
-        SliderTrac--;
+        elem.parentNode.removeChild(elem);  
+        SliderTrac--;    
     }
 
 }
