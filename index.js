@@ -49,22 +49,32 @@ console.log(BoxtoarrayL + "BoxtoarrayL")
 
 if(BoxtoarrayL < 1 )
 {
-    window.alert("Du Har For liten personer til og lage grupene leg til flere eler lag mindre gruper ☺");
+    window.alert("Du Har For lite personer til og lage grupene leg til flere eller lag mindre gruper ☺");
     return 0;
 }
-var Id = -1;
+var Id = 0;
+var Reset = true;
 
 
 array.forEach(function(element) 
 {  
-   
-    if(Id > element) {Id = -1}
-    Id++;
-       var  uniqueId = "BoxId" + Id;
-    document.getElementById(uniqueId).value += element;
+    if(Id == SliderTall)
+    { 
+        Id = -0
+        Reset = false;
+    } 
+    var  uniqueId = "BoxId" + Id;
+    console.log(Id + "iD");
+if(Reset == true)
+{
+    document.getElementById(uniqueId).value = "";
+}
+    document.getElementById(uniqueId).value += element + "\n";
     console.log(element + "iBox");
-    console.log(Id + "iBox"); 
+    console.log(uniqueId + "uniqueId"); 
+    Id++;
 } );
+
 }
 
 function Slid() {
