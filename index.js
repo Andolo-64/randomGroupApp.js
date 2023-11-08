@@ -1,5 +1,6 @@
 var SliderTall = 5;
 var SliderTrac = -1;
+var SaveText = "a";
 
 function makeArray() {
     var valueInVar = document.getElementById("name").value;
@@ -11,7 +12,7 @@ function genBtn() {
     var array = makeArray(); // Store the array returned by makeArray in a variable.
     LagBox();
     SletBox();
-    shuffle(array); // Pass the array to the shuffle function.
+    shuffle(array); // Pass the array to the shuffle function.   
 }
 
 //fisher yates shuffle algoritm så me fant på https://bost.ocks.org/mike/shuffle/ 3eie løsning
@@ -44,8 +45,8 @@ function shuffle(array) {
 function arrayIbox(array)
 {
 var BoxToArrayL = array.length / SliderTall ;
-console.log(BoxtoarrayL + "BoxtoarrayL")
-
+console.log(BoxToArrayL + "BoxtoarrayL")
+SaveText = "";
 //paser på at du har nok navn iforhold til gruper
 if(BoxToArrayL < 1 )
 {
@@ -55,7 +56,8 @@ if(BoxToArrayL < 1 )
 var Id = 0;
 var Reset = true;
 
-array.forEach(function(element) 
+
+array.forEach(function(element)
 {  
     if(Id == SliderTall)
     { 
@@ -70,9 +72,39 @@ if(Reset == true)//reseter kva som er i boxene
 }
     document.getElementById(uniqueId).value += element + "\n";
     console.log(element + "iBox");
-    console.log(uniqueId + "uniqueId"); 
+    console.log(uniqueId + "uniqueId");
     Id++;
-} );
+   } );
+
+
+}
+
+function downloadBtn()
+{
+
+    for (var saveTrac = 0 ;saveTrac < SliderTall;){
+        var  uniqueId = "BoxId" + saveTrac;
+        console.log(uniqueId + "saveid")
+        var gettext = document.getElementById(uniqueId).value;
+        var SavetempText = gettext;
+        SaveText +="Grupe" + (saveTrac + 1) + "\n" + SavetempText ;
+        saveTrac++;      
+    }
+
+    console.log("Save"); 
+    console.log(SaveText); 
+
+    var blob = new Blob([SaveText], { type: 'text/plain'});
+    var a = document.createElement('a');
+    a.href = window.URL.createObjectURL(blob);
+    a.download = 'Gruper.txt';
+    a.style.display = 'none';
+    
+    document.body.appendChild(a);
+    a.click();
+    
+    window.URL.revokeObjectURL(a.href);
+    document.body.removeChild(a);
 }
 
 //Skafer kor mange gruper det skall vere
