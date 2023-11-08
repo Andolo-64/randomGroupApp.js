@@ -1,6 +1,6 @@
 var SliderTall = 5;
 var SliderTrac = -1;
-var SaveText = "a";
+var SaveText = "";
 
 function makeArray() {
     var valueInVar = document.getElementById("name").value;
@@ -56,7 +56,6 @@ if(BoxToArrayL < 1 )
 var Id = 0;
 var Reset = true;
 
-
 array.forEach(function(element)
 {  
     if(Id == SliderTall)
@@ -76,12 +75,10 @@ if(Reset == true)//reseter kva som er i boxene
     Id++;
    } );
 
-
 }
 
 function downloadBtn()
 {
-
     for (var saveTrac = 0 ;saveTrac < SliderTall;){
         var  uniqueId = "BoxId" + saveTrac;
         console.log(uniqueId + "saveid")
@@ -105,6 +102,7 @@ function downloadBtn()
     
     window.URL.revokeObjectURL(a.href);
     document.body.removeChild(a);
+    SaveText = "";
 }
 
 //Skafer kor mange gruper det skall vere
