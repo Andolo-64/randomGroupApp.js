@@ -1,7 +1,6 @@
 var SliderTall = 5;
 var SliderTrac = -1;
 
-
 function makeArray() {
     var valueInVar = document.getElementById("name").value;
     let array = valueInVar.split("\n");
@@ -41,20 +40,20 @@ function shuffle(array) {
 };
   // slutt av fisher yates algoritmen
 
-  // random tall ta array med random tall put i box
+  //  tar array med random Navn og put element i boxene
 function arrayIbox(array)
 {
-var BoxtoarrayL = array.length / SliderTall ;
+var BoxToArrayL = array.length / SliderTall ;
 console.log(BoxtoarrayL + "BoxtoarrayL")
 
-if(BoxtoarrayL < 1 )
+//paser på at du har nok navn iforhold til gruper
+if(BoxToArrayL < 1 )
 {
     window.alert("Du Har For lite personer til og lage grupene leg til flere eller lag mindre gruper ☺");
     return 0;
 }
 var Id = 0;
 var Reset = true;
-
 
 array.forEach(function(element) 
 {  
@@ -65,7 +64,7 @@ array.forEach(function(element)
     } 
     var  uniqueId = "BoxId" + Id;
     console.log(Id + "iD");
-if(Reset == true)
+if(Reset == true)//reseter kva som er i boxene
 {
     document.getElementById(uniqueId).value = "";
 }
@@ -74,9 +73,9 @@ if(Reset == true)
     console.log(uniqueId + "uniqueId"); 
     Id++;
 } );
-
 }
 
+//Skafer kor mange gruper det skall vere
 function Slid() {
     const sliderTall = document.getElementById("sliderTall");
     SliderTall = document.getElementById("GrupeSlider").value;
